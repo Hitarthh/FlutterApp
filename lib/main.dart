@@ -1,7 +1,9 @@
+import 'package:first_app/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'home_page.dart';
-import 'login_page.dart';
+import 'pages/home_page.dart';
+import 'pages/login_page.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -16,11 +18,11 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.light,
           fontFamily: GoogleFonts.aBeeZee().fontFamily,
         ),
-        initialRoute: "/LoginPage",
+        initialRoute: "/",
         routes: {
-          "/": (context) => HomePage(),
-          "/LoginPage": (context) => LoginPage(),
-          "/HomePage": (context) => HomePage(),
+          "/": (context) => LoginPage(),
+          "/login": (context) => LoginPage(),
+          "/home": (context) => HomePage(),
         });
   }
 }
